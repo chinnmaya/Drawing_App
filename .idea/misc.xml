@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/drawing_view.xml" value="0.1715" />
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/large.xml" value="0.1715" />
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/medium.xml" value="0.1715" />
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/pallet_normal.xml" value="0.13" />
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/pallet_pressed.xml" value="0.13" />
+        <entry key="..\:/drawingapp/app/src/main/res/drawable/small.xml" value="0.1715" />
+        <entry key="..\:/drawingapp/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/drawingapp/app/src/main/res/layout/dialog_brushsize.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
