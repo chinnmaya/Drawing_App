@@ -17,12 +17,17 @@
        app:layout_constraintRight_toRightOf="parent"
        >
       <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+         android:id="@+id/iv_background"/>
+
+      <ImageView
+
           android:layout_width="match_parent"
           android:layout_height="match_parent"
-          android:src="@drawable/ss"
-          android:scaleType="centerCrop">
-
-      </ImageView>
+          android:contentDescription="image"
+          android:scaleType="centerCrop" />
 
    <com.example.drawingapp.Drawing
        android:layout_width="match_parent"
@@ -48,7 +53,7 @@
       app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@id/fl_canvas"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintBottom_toTopOf="@id/brushsize">
+       app:layout_constraintBottom_toTopOf="@id/tools">
       <ImageButton
       android:layout_width="25dp"
       android:layout_height="25dp"
@@ -86,6 +91,7 @@
           android:id="@+id/paintbar4"
           android:src="@drawable/pallet_normal"
           android:tag="@color/green"
+          android:onClick="paintclick"
           android:background="@color/green"
           />
       <ImageButton
@@ -129,18 +135,82 @@
           android:tag="@color/white"
           android:background="@color/white"
           />   </LinearLayout>
-   <ImageButton
+   <LinearLayout
+       android:id="@+id/tools"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:id="@+id/brushsize"
-       android:onClick="paintclick"
-       android:src="@drawable/medium"
-       android:scaleType="fitXY"
+       android:orientation="horizontal"
        app:layout_constraintTop_toBottomOf="@id/ll_paintBar"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       />
+
+       app:layout_constraintEnd_toEndOf="parent">
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/brushsize"
+          android:layout_margin="5dp"
+
+          android:onClick="paintclick"
+
+          android:src="@drawable/ic_brush"
+          android:scaleType="fitXY"
+
+          />
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/ic_ondo"
+          android:layout_margin="5dp"
+
+
+
+          android:src="@drawable/ic_undo"
+          android:scaleType="fitXY"
+
+          />
+      <ImageButton
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/redo"
+          android:layout_margin="5dp"
+
+
+
+          android:src="@drawable/redo"
+          android:scaleType="fitXY"
+
+          />
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/btn_gallery"
+
+
+
+
+          android:src="@drawable/ic_gallery"
+          android:scaleType="fitXY"
+
+          />
+      <ImageButton
+          android:layout_margin="5dp"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:id="@+id/btn_save"
+
+
+
+
+          android:src="@drawable/save"
+          android:scaleType="fitXY"
+
+          />
+
+   </LinearLayout>
+
+
 
 
 

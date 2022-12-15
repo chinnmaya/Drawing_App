@@ -21,11 +21,31 @@ class Drawing (context:Context,attrs:AttributeSet):View(context,attrs){
     private  var brushsize:Float=0.toFloat()
     private  var color=Color.BLACK
     private var canvas:Canvas?=null
-    private  val mpaths=ArrayList<CustomPath>()
+    private  val mpaths=ArrayList<CustomPath>()//stores the recent line path we draw
+    private  val mundopath=ArrayList<CustomPath>()
 
     init {
         setupDrawing()
     }
+    //undo
+    public  fun onclickundo(){
+        if(mpaths.size>0){
+           mundopath.add(mpaths.removeAt(mpaths.size-1))
+            invalidate()
+
+
+        }
+    }
+    //redo
+    public  fun onclickredo(){
+        if(mundopath.size>0){
+            mpaths.add(mundopath.removeAt(mundopath.size-1))
+            invalidate()
+
+
+        }
+    }
+
 
     private fun setupDrawing() {
         mDrawPaint=Paint()
